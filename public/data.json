@@ -1,0 +1,7 @@
+[
+  { "id": 1, "name": "Item 1", "category": "Electronics", "subCategory": "Mobile" },
+  { "id": 2, "name": "Item 2", "category": "Electronics", "subCategory": "Laptop" },
+  { "id": 3, "name": "Item 3", "category": "Clothing", "subCategory": "Shirts" },
+  { "id": 4, "name": "Item 4", "category": "Clothing", "subCategory": "Pants" },
+  { "id": 5, "name": "Item 5", "category": "Groceries", "subCategory": "Fruits" }
+]

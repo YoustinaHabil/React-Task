@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "./App.css";
+import PostsGroupedByUser from "./components/GroupedPosts";
+
+import ApiProvider, { DataProvider } from "./store/DataContext";
+import AllPostsPage from "./components/pageList";
+import PostsByUserPage from "./components/GroupedPosts";
+import PostDetailsPage from "./components/postDetails";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+<DataProvider>
+    <Router>
+      <Routes>
+      <Route path="/users" element={<PostsByUserPage />} />
+      <Route path="/posts" element={<AllPostsPage />} />
+      <Route path="/post/:id" element={<PostDetailsPage />} />
+
+      </Routes>
+    </Router>
+    </DataProvider>
+      {/* <DataProvider>
+        <PostsGroupedByUser />
+        <AllPostsPage/>
+     
+ 
+    
+      </DataProvider> */}
+    </>
   );
 }
 

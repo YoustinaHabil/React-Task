@@ -1,10 +1,17 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { DataProvider } from "./store/DataContext";
-import AllPostsPage from "./components/pageLists/pageList";
-import PostsByUserPage from "./components/GroupedPosts/PostByUser";
-import PostDetailsPage from "./components/PostDetails/PostDetailsPage";
-import PostDelete from "./components/PostDetails/PostDelete";
-import PostUpdate from "./components/PostDetails/PostUpdate";
+import { lazy, Suspense } from "react";
+import Loader from "./components/Loaders/Loaders.jsx";
+//LazyLoading
+const PostsByUserPage = lazy(() =>
+  import("./components/GroupedPosts/PostByUser")
+);
+const PostDetailsPage = lazy(() =>
+  import("./components/PostDetails/PostDetailsPage")
+);
+const AllPostsPage = lazy(() =>
+  import("./components/pageLists/pageList")
+);
 
 function App() {
   return (
@@ -12,12 +19,31 @@ function App() {
       <DataProvider>
         <Router>
           <Routes>
-            <Route path="/users" element={<PostsByUserPage />} />
-            <Route path="/posts" element={<AllPostsPage />} />
-            <Route path="/post/:id" element={<PostDetailsPage />} />
-            <Route path="/post/:id" element={<PostDelete />} />
-            <Route path="/post/:id" element={<PostUpdate />} />
+            <Route
+              path="/users"
+              element={
+                <Suspense fallback={<Loader />}>
+                  <PostsByUserPage />
+                </Suspense>
+              }
+            />
+                 <Route
+              path="/posts"
+              element={
+                <Suspense fallback={<Loader />}>
+                  <AllPostsPage />
+                </Suspense>
+              }
+            />
 
+            <Route
+              path="/post/:id"
+              element={
+                <Suspense fallback={<Loader />}>
+                  <PostDetailsPage />
+                </Suspense>
+              }
+            />
           </Routes>
         </Router>
       </DataProvider>

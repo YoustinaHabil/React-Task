@@ -18,4 +18,3 @@ const Posts = ({ filteredPosts, postsToShow, handleLoadMore }) => (
 );
 
 export default Posts;
-

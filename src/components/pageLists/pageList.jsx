@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import { DataContext } from "../../store/DataContext";
-import "./PageList.css";
+import style from "./PageList.css";
 import Search from "./Search";
 import Sort from "./Sort";
 import Posts from "./Posts";
@@ -47,7 +47,7 @@ const AllPostsPage = () => {
   if (error) return <ErrorMessage message={error} />;
 
   return (
-    <div className="container">
+    <div className={style.container}>
       <h1>All Posts</h1>
       <Search handleSearch={handleSearch} />
       <Sort handleSort={handleSort} />

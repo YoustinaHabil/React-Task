@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { DataProvider } from "./store/DataContext";
 import { lazy, Suspense } from "react";
 import Loader from "./components/Loaders/Loaders.jsx";
+import Header from "./components/Header/header.jsx";
 //LazyLoading
 const PostsByUserPage = lazy(() =>
   import("./components/GroupedPosts/PostByUser")
@@ -18,6 +19,7 @@ function App() {
     <>
       <DataProvider>
         <Router>
+          <Header></Header>
           <Routes>
             <Route
               path="/users"

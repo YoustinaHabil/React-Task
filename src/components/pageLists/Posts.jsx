@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import style from "./Posts.module.css";
 const Posts = ({ filteredPosts, postsToShow, handleLoadMore }) => (
   <div className="posts-container">
     {filteredPosts.slice(0, postsToShow).map((post) => (
-      <div key={post.id} className="post-card">
+      <div key={post.id} className={style.postcard}>
         <h3>{post.title}</h3>
         <p>{post.body}</p>
         <p>User ID: {post.userId}</p>

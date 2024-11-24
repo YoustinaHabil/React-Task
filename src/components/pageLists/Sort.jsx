@@ -1,7 +1,7 @@
 import React from 'react';
-
+import style from './Sort.module.css'
 const Sort = ({ handleSort }) => (
-  <div className="sort-container">
+  <div className={style.sortContainer}>
     <select onChange={(e) => {
       const [field, order] = e.target.value.split('-');
       handleSort(field, order);

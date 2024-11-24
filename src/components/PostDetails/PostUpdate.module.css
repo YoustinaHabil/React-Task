@@ -1,0 +1,102 @@
+.updateActions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.saveBtn,
+.editBtn,
+.deleteBtn,
+.modalConfirmBtn,
+.modalCancelBtn {
+  padding: 10px 15px;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s;
+}
+
+.saveBtn {
+  background-color: #0073e6;
+  color: white;
+}
+
+.saveBtn:hover {
+  background-color: #005bb5;
+}
+
+.editBtn {
+  background-color: #2600ff;
+  color: white;
+}
+
+.editBtn:hover {
+  background-color: #1900f5;
+}
+
+.deleteBtn {
+  background-color: #e53935;
+  color: white;
+}
+
+.deleteBtn:hover {
+  background-color: #d32f2f;
+}
+
+/* Modal Styling */
+.modalBackdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+
+.modalContent h3 {
+  margin-bottom: 20px;
+  font-size: 1.2em;
+}
+
+.modalButtons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.modalConfirmBtn,
+.modalCancelBtn {
+  width: 45%;
+}
+
+.modalConfirmBtn {
+  background-color: #0073e6;
+  color: white;
+}
+
+.modalConfirmBtn:hover {
+  background-color: #005bb5;
+}
+
+.modalCancelBtn {
+  background-color: #d32f2f;
+  color: white;
+}
+
+.modalCancelBtn:hover {
+  background-color: #c62828;
+}

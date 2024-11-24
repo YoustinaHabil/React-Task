@@ -1,10 +1,10 @@
 import React from 'react';
-
+import style from './Search.module.css'
 const Search = ({ handleSearch }) => (
-  <div className="input-container">
+  <div className={style.inputcontainer}>
     <input
       type="text"
-      placeholder="Search by User ID"
+      placeholder="searchPlaceholder"
       onChange={(e) => handleSearch(e.target.value)}
     />
   </div>

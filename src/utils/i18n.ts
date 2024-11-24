@@ -36,10 +36,11 @@ i18n
           confirmDelete: "Are you sure you want to delete this post?",
           yes: "Yes",
           no: "No",
-          titleRequired:"titleRequired",
-          titleLenght100: "titleMaxLength 100",
+          titleRequired:"title is required",
+          titleLenght100: "title MaxLength 100",
           descriptionRequired:"descriptionRequired",
           descriprtionLenght500:  "descriptionMaxLength 500",
+       
         }
       },
       ar: {

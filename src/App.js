@@ -5,6 +5,7 @@ import Loader from "./components/Loaders/Loaders.jsx";
 import { I18nextProvider } from 'react-i18next';
 import i18n from './utils/i18n.ts';
 import Header from "./components/Header/header.jsx";
+import "./index.css"
 //LazyLoading
 const PostsByUserPage = lazy(() =>
   import("./components/GroupedPosts/PostByUser")

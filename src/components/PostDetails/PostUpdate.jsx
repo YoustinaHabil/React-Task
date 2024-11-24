@@ -5,17 +5,17 @@ import * as yup from "yup";
 import { useTranslation } from "react-i18next";
 import styles from "./PostUpdate.module.css";
 
-const schema = yup.object().shape({
-  title: yup.string()  .required("titleRequired")
-  .max(100, "titleLenght100"),
-  body: yup.string().required("descriptionRequired")
-  .max(500, "descriptionLenght500"),
-});
+
 
 const PostUpdate = ({ post, setMessage, setIsEditing }) => {
   const { t } = useTranslation();
   const [editMode, setEditMode] = useState(false);
-
+  const schema = yup.object().shape({
+    title: yup.string().required(t("titleRequired"))
+    .max(100, "titleLenght100"),
+    body: yup.string().required(t("descriptionRequired"))
+    .max(500,t("descriprtionLenght500")),
+  });
   const {
     register,
     handleSubmit,

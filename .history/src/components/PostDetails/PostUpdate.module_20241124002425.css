@@ -1,0 +1,42 @@
+/* Edit Form */
+.edit-form {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  margin: 20px auto;
+}
+
+.edit-form div {
+  margin-bottom: 15px;
+}
+
+.edit-form label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.edit-form input,
+.edit-form textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.edit-form button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.edit-form .error {
+  color: #ff4d4d;
+  font-size: 14px;
+}

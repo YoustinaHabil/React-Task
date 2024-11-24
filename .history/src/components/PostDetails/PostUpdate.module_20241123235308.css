@@ -1,0 +1,68 @@
+.updatePost {
+  padding: 20px;
+}
+
+.updatePost h2 {
+  margin-bottom: 20px;
+}
+
+.updatePost form {
+  display: flex;
+  flex-direction: column;
+}
+
+.updatePost label {
+  font-weight: bold;
+}
+
+.updatePost input,
+.updatePost textarea {
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.inputError {
+  border-color: red;
+}
+
+.error {
+  color: red;
+  font-size: 0.9em;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.saveBtn,
+.cancelBtn {
+  padding: 10px 15px;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s;
+}
+
+.saveBtn {
+  background-color: #0073e6;
+  color: white;
+}
+
+.saveBtn:hover {
+  background-color: #005bb5;
+}
+
+.cancelBtn {
+  background-color: #d32f2f;
+  color: white;
+}
+
+.cancelBtn:hover {
+  background-color: #c62828;
+}

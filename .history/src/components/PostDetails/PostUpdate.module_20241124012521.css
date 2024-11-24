@@ -1,0 +1,31 @@
+.editForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.editForm label {
+  font-weight: bold;
+}
+
+.editForm input,
+.editForm textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.editForm button {
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+}
